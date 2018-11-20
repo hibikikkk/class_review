@@ -6,7 +6,7 @@ class Customer:
         self.age = age
 
     def full_name(self):
-        print(self.first_name + " " + self.family_name)
+        return self.first_name + " " + self.family_name
 
     def entry_fee(self):
         # ガード節使ってみた
@@ -18,3 +18,9 @@ class Customer:
 
         if self.age >= 65:
             return 1200
+
+    def info_csv(self):
+        user_full_name = self.full_name()
+        user_payment = self.entry_fee()
+
+        return f"{user_full_name},{self.age},{user_payment}"
