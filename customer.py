@@ -22,6 +22,9 @@ class Customer:
         if self.age >= 65 and self.age < 75:
             return 1200
 
+        if self.age >= 75:
+            return 500
+
     def info_csv(self):
         user_full_name = self.full_name()
         user_payment = self.entry_fee()
