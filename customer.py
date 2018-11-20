@@ -38,3 +38,7 @@ class Customer:
         return f"{user_full_name}   {self.age}  {user_payment}"
 
     def info_format_split_pipe(self):
+        user_full_name = self.full_name()
+        user_payment = self.entry_fee()
+
+        return f"{user_full_name}|{self.age}|{user_payment}"
