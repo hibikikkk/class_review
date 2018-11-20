@@ -10,13 +10,16 @@ class Customer:
 
     def entry_fee(self):
         # ガード節使ってみた
+        if self.age <= 3:
+            return 0
+
         if self.age < 20:
             return 1000
 
         if self.age >= 20 and self.age < 65:
             return 1500
 
-        if self.age >= 65:
+        if self.age >= 65 and self.age < 75:
             return 1200
 
     def info_csv(self):
